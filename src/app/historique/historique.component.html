@@ -1,1 +1,29 @@
-<p>historique works!</p>
+<h1>Historique des reclamations</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id_reclamation</th>
+      <th scope="col">date_reclamation</th>
+      <th scope="col">type_reclamation</th>
+      <th scope="col">etat_reclamation</th>
+      <th scope="col">description_reclamation</th>
+      <th scope="col">id_client</th>
+      <th scope="col">id_produit</th>
+      <th scope="col">id_commande</th>
+      <th scope="col">id_livraison</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let reclamation of reclamations">
+      <td>{{ reclamation.id_reclamation }}</td>
+      <td>{{ reclamation.date_reclamation }}</td>
+      <td>{{ reclamation.type_reclamation }}</td>
+      <td>{{ reclamation.etat_reclamation }}</td>
+      <td>{{ reclamation.description_reclamation }}</td>
+      <td>{{ reclamation.id_client }}</td>
+      <td>{{ reclamation.id_produit }}</td>
+      <td>{{ reclamation.id_commande }}</td>
+      <td>{{ reclamation.id_livraison }}</td>
+    </tr>
+  </tbody>
+</table>
