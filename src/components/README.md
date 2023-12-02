@@ -1,4 +1,4 @@
-# Components
+# Components Angular
 
 Bienvenue dans les components Ce dépôt contient le code source pour plusieurs fonctionnalités, notamment la gestion des utilisateurs, les réclamations, et un système de connexion.
 
@@ -56,4 +56,4 @@ Le dossier `users/` contient des composants pour afficher la liste des utilisate
 
 ## Besoin d'Aide?
 
-Si vous avez des questions ou besoin d'aide sur une partie spécifique du projet, n'hésitez pas à utiliser les boutons d'aide associés à chaque composant. Vous pouvez également créer une issue sur GitHub pour obtenir de l'aide de la communauté.
+Si vous avez des questions ou besoin d'aide sur une partie spécifique du projet, n'hésitez pas à utiliser les boutons d'aide associés à chaque composant. 
