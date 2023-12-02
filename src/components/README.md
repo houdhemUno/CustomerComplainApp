@@ -1,50 +1,6 @@
-#components
+# Components
 
 Bienvenue dans les components Ce dépôt contient le code source pour plusieurs fonctionnalités, notamment la gestion des utilisateurs, les réclamations, et un système de connexion.
-
-## Arborescence du Projet
-/
-|-- login/
-| |-- login.component.html
-| |-- login.component.scss
-| |-- login.component.spec.ts
-| |-- login.component.ts
-|
-|-- reclamation-details/
-| |-- reclamation-details.component.html
-| |-- reclamation-details.component.scss
-| |-- reclamation-details.component.spec.ts
-| |-- reclamation-details.component.ts
-|
-|-- reclamation-form/
-| |-- reclamation-form.component.html
-| |-- reclamation-form.component.scss
-| |-- reclamation-form.component.spec.ts
-| |-- reclamation-form.component.ts
-|
-|-- reclamation/
-| |-- reclamation.component.html
-| |-- reclamation.component.scss
-| |-- reclamation.component.spec.ts
-| |-- reclamation.component.ts
-|
-|-- user-details/
-| |-- user-details.component.html
-| |-- user-details.component.scss
-| |-- user-details.component.spec.ts
-| |-- user-details.component.ts
-|
-|-- user-form/
-| |-- user-form.component.html
-| |-- user-form.component.scss
-| |-- user-form.component.spec.ts
-| |-- user-form.component.ts
-|
-|-- users/
-| |-- users.component.html
-| |-- users.component.scss
-| |-- users.component.spec.ts
-| |-- users.component.ts
 
 ## Fonctionnalités
 
@@ -52,29 +8,43 @@ Bienvenue dans les components Ce dépôt contient le code source pour plusieurs 
 
 Le dossier `login/` contient les composants nécessaires pour la gestion de la connexion.
 
+[![Aide Connexion](https://img.shields.io/badge/Aide-Connexion-blue)](#) 
+
 ### Détails de la Réclamation (`reclamation-details/`)
 
 Le dossier `reclamation-details/` propose des composants pour afficher les détails d'une réclamation.
+
+[![Aide Réclamation Details](https://img.shields.io/badge/Aide-R%C3%A9clamation%20Details-green)](#) 
 
 ### Formulaire de Réclamation (`reclamation-form/`)
 
 Le dossier `reclamation-form/` offre des composants permettant de créer et éditer une réclamation.
 
+[![Aide Formulaire Réclamation](https://img.shields.io/badge/Aide-Formulaire%20R%C3%A9clamation-yellow)](#) 
+
 ### Réclamation (`reclamation/`)
 
 Le dossier `reclamation/` contient des composants pour afficher les informations relatives aux réclamations.
+
+[![Aide Réclamation](https://img.shields.io/badge/Aide-R%C3%A9clamation-red)](#) 
 
 ### Détails de l'Utilisateur (`user-details/`)
 
 Le dossier `user-details/` propose des composants pour afficher les détails d'un utilisateur.
 
+[![Aide Utilisateur Details](https://img.shields.io/badge/Aide-Utilisateur%20Details-purple)](#) 
+
 ### Formulaire d'Utilisateur (`user-form/`)
 
 Le dossier `user-form/` offre des composants permettant de créer et éditer un utilisateur.
 
+[![Aide Formulaire Utilisateur](https://img.shields.io/badge/Aide-Formulaire%20Utilisateur-orange)](#) 
+
 ### Utilisateurs (`users/`)
 
 Le dossier `users/` contient des composants pour afficher la liste des utilisateurs.
+
+[![Aide Utilisateurs](https://img.shields.io/badge/Aide-Utilisateurs-lightgrey)](#) 
 
 ## Comment Contribuer
 
@@ -87,6 +57,3 @@ Le dossier `users/` contient des composants pour afficher la liste des utilisate
 ## Besoin d'Aide?
 
 Si vous avez des questions ou besoin d'aide sur une partie spécifique du projet, n'hésitez pas à utiliser les boutons d'aide associés à chaque composant. Vous pouvez également créer une issue sur GitHub pour obtenir de l'aide de la communauté.
-
-
-
