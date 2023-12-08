@@ -1,20 +1,31 @@
+import { Injectable } from '@angular/core';
+import { Observable} from 'rxjs'; 
+
+export interface Reclamation {
+  id: number;
+  sujet: string;
+  description: string;
+  date: Date;
+}
 
 export class ReclamationService {
   
-    getReclamations(){
-    
-  }
+   // Récupérer toutes les réclamations
+   //getAllReclamations(): Observable<Reclamation[]> {
+  //}
 
-  getReclamationById(reclamationId: number){
-    
-  }
+  // Récupérer une réclamation par son ID depuis le backend
+  //getReclamationById(reclamationId: number): Observable<Reclamation> {
+  //}
 
-  createReclamation(reclamation: any){
-    
-  }
+  // Créer une nouvelle réclamation
+  //createReclamation(reclamation: Reclamation){
+  //}
 
-  updateReclamation(reclamation: any) {
-    
-  }
+  // Mettre à jour une réclamation 
+  //updateReclamation(reclamation: Reclamation): Observable<Reclamation>{
+  //}
 
+  // Supprimer une réclamation sur le backend
+  // deleteReclamation(id: number){}
 }
