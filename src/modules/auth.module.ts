@@ -8,9 +8,10 @@ import { AuthenticationService } from '../services/authentication.service';
 
 @NgModule({
   declarations: [
-    LoginComponent
+    // LoginComponent
   ],
   imports: [
+    LoginComponent,
     CommonModule,
     FormsModule,
     RouterModule.forChild([

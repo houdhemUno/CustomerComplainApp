@@ -16,9 +16,10 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    // AppComponent
   ],
   imports: [
+    AppComponent,
     BrowserModule,
      // Include the main routing module
     ReclamationModule,
@@ -31,6 +32,5 @@ import { AppComponent } from './app.component';
     ValidationModule,
     HistoryModule,
   ],
-  bootstrap: [AppComponent]
-})
+ })
 export class AppModule { }
