@@ -26,6 +26,9 @@ import { ReclamationService } from '../services/reclamation.service';
   ],
   providers: [
     ReclamationService
+  ],
+  exports: [
+     
   ]
 })
 export class ReclamationModule { }
