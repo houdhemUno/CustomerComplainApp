@@ -8,10 +8,9 @@ describe('ReclamationFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReclamationFormComponent]
-    })
-    .compileComponents();
-    
+      imports: [ReclamationFormComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ReclamationFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -12,7 +12,7 @@ import { ReclamationService } from '../services/reclamation.service';
   declarations: [
     ReclamationsComponent,
     ReclamationDetailsComponent,
-    ReclamationFormComponent
+    ReclamationFormComponent,
   ],
   imports: [
     CommonModule,
@@ -21,14 +21,10 @@ import { ReclamationService } from '../services/reclamation.service';
       { path: 'reclamations', component: ReclamationsComponent },
       { path: 'reclamations/:id', component: ReclamationDetailsComponent },
       { path: 'creer-reclamation', component: ReclamationFormComponent },
-      { path: 'modifier-reclamation/:id', component: ReclamationFormComponent }
-    ])
+      { path: 'modifier-reclamation/:id', component: ReclamationFormComponent },
+    ]),
   ],
-  providers: [
-    ReclamationService
-  ],
-  exports: [
-     
-  ]
+  providers: [ReclamationService],
+  exports: [],
 })
-export class ReclamationModule { }
+export class ReclamationModule {}

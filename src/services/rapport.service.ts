@@ -5,15 +5,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ReportGenerationService {
- 
-
   constructor(private http: HttpClient) {}
 
   // Méthode pour récupérer les données de réclamation depuis l'API
- // getAllReclamations(): Observable<any[]> { }
+  // getAllReclamations(): Observable<any[]> { }
 
   // Méthode pour générer des rapports détaillés sur les réclamations
   generateDetailedReport(reclamations: any[]): any {
