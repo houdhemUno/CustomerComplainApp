@@ -7,8 +7,12 @@ import { LoginComponent } from '../components/login/login.component';
 import { AuthenticationService } from '../services/authentication.service';
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [
+    // LoginComponent
+  ],
+
   imports: [
+    LoginComponent,
     CommonModule,
     FormsModule,
     RouterModule.forChild([{ path: 'login', component: LoginComponent }]),
