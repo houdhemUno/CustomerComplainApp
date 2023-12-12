@@ -10,8 +10,16 @@ import { UserFormComponent } from '../components/user-form/user-form.component';
 import { UserService } from '../services/user.service';
 
 @NgModule({
-  declarations: [UsersComponent, UserDetailsComponent, UserFormComponent],
+  declarations: [
+    // UsersComponent,
+    // UserDetailsComponent,
+    // UserFormComponent
+  ],
+
   imports: [
+    UsersComponent,
+    UserDetailsComponent,
+    UserFormComponent,
     CommonModule,
     FormsModule,
     RouterModule.forChild([
