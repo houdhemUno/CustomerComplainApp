@@ -3,22 +3,16 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-
 @NgModule({
-  declarations: [
- ],
+  declarations: [],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forChild([
-    ]),
+    RouterModule.forChild([]),
   ],
-  providers: [
-  ],
-  
-  exports: [
-     
-  ]
+  providers: [],
+
+  exports: [],
 })
-export class ManagementModule { }
+export class ManagementModule {}
