@@ -22,18 +22,13 @@ import { UserService } from '../services/user.service';
     CommonModule,
     FormsModule,
     RouterModule.forChild([
-      { path: 'users', component: UsersComponent},
-      { path: 'user/:id', component: UserDetailsComponent},
-      { path: 'creer-user', component: UserFormComponent},
-      { path: 'modifier-user/:id', component: UserFormComponent}
-      
-    ])
+      { path: 'users', component: UsersComponent },
+      { path: 'user/:id', component: UserDetailsComponent },
+      { path: 'creer-user', component: UserFormComponent },
+      { path: 'modifier-user/:id', component: UserFormComponent },
+    ]),
   ],
-  providers: [
-    UserService
-  ],
-  exports: [
-     
-  ]
+  providers: [UserService],
+  exports: [],
 })
-export class UserModule { }
+export class UserModule {}

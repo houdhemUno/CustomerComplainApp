@@ -1,23 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-
 @NgModule({
-  declarations: [
-   
-  ],
-  imports: [
-    
-    RouterModule.forChild([
-      
-      
-    ])
-  ],
-  providers: [
-    
-  ],
-  exports: [
-     
-  ]
+  declarations: [],
+  imports: [RouterModule.forChild([])],
+  providers: [],
+  exports: [],
 })
-export class StatisticsModule { }
+export class StatisticsModule {}

@@ -4,18 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    RouterModule.forChild([
-      ]),
-  ],
-  providers: [
-  ],
-  exports: [
-     
-  ]
+  declarations: [],
+  imports: [CommonModule, FormsModule, RouterModule.forChild([])],
+  providers: [],
+  exports: [],
 })
-export class DashboardModule { }
+export class DashboardModule {}
