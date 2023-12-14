@@ -13,7 +13,6 @@ import { ReclamationService } from '../services/reclamation.service';
     // ReclamationsComponent,
     // ReclamationDetailsComponent,
     // ReclamationFormComponent
-
   ],
   imports: [
     ReclamationsComponent,

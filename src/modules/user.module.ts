@@ -15,7 +15,6 @@ import { UserService } from '../services/user.service';
     // UserDetailsComponent,
     // UserFormComponent
   ],
-
   imports: [
     UsersComponent,
     UserDetailsComponent,

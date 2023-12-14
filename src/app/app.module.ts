@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
  // Import the main routing module
 
 import { ReclamationModule } from '../modules/reclamation.module';
@@ -32,5 +33,5 @@ import { AppComponent } from './app.component';
     ValidationModule,
     HistoryModule,
   ],
- })
+})
 export class AppModule { }
