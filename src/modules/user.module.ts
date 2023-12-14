@@ -11,11 +11,14 @@ import { UserService } from '../services/user.service';
 
 @NgModule({
   declarations: [
-    UsersComponent,
-    UserDetailsComponent,
-    UserFormComponent
+    // UsersComponent,
+    // UserDetailsComponent,
+    // UserFormComponent
   ],
   imports: [
+    UsersComponent,
+    UserDetailsComponent,
+    UserFormComponent,
     CommonModule,
     FormsModule,
     RouterModule.forChild([

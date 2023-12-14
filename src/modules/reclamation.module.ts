@@ -10,11 +10,14 @@ import { ReclamationService } from '../services/reclamation.service';
 
 @NgModule({
   declarations: [
-    ReclamationsComponent,
-    ReclamationDetailsComponent,
-    ReclamationFormComponent
+    // ReclamationsComponent,
+    // ReclamationDetailsComponent,
+    // ReclamationFormComponent
   ],
   imports: [
+    ReclamationsComponent,
+    ReclamationDetailsComponent,
+    ReclamationFormComponent,
     CommonModule,
     FormsModule,
     RouterModule.forChild([

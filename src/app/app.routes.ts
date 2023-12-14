@@ -9,9 +9,11 @@ import { UsersComponent } from '../components/users/users.component';
 import { UserDetailsComponent } from '../components/user-details/user-details.component';
 import { UserFormComponent } from '../components/user-form/user-form.component';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
+import { LandingComponent } from '../components/landing/landing.component';
 
 
 export const routes: Routes = [    
+{path: '', component: LandingComponent  },
 {path: 'reclamations', component: ReclamationsComponent },
 {path: 'reclamation/:id', component: ReclamationDetailsComponent },
 {path: 'creer-reclamation', component: ReclamationFormComponent },
