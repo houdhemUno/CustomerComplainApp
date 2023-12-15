@@ -1,11 +1,29 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { RapportService } from '../../services/rapport.service';
+import { Rapport } from '../../models/rapport.model';
 
 @Component({
   selector: 'app-rapports',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './rapports.component.html',
-  styleUrl: './rapports.component.scss',
+  styleUrls: ['./rapports.component.scss'],
 })
-export class RapportsComponent {}
+export class RapportsComponent implements OnInit {
+  rapports: Rapport[] = [];
+
+  constructor(private rapportService: RapportService) {}
+
+  ngOnInit(): void {
+    this.retrieveRapports();
+  }
+
+  retrieveRapports(): void {
+    this.rapportService.getAllRapports().subscribe(
+      (data) => {
+        this.rapports = data;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+}

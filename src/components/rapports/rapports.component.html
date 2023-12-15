@@ -1,1 +1,51 @@
-<p>rapports works!</p>
+<div *ngIf="rapports.length > 0; else noRapports">
+  <h2>List of Rapports</h2>
+  <ul>
+    <li *ngFor="let rapport of rapports">
+      <h3>Rapport ID: {{ rapport._id }}</h3>
+      <p>User ID: {{ rapport.userId }}</p>
+      <p>Reference Prefix: {{ rapport.referencePrefix }}</p>
+      <p>Reference: {{ rapport.reference }}</p>
+      <p>Status: {{ rapport.status?.join(', ') }}</p>
+      <p>Created Date: {{ rapport.createdDate | date }}</p>
+      <p>Last Updated Date: {{ rapport.lastUpdatedDate | date }}</p>
+      <!-- Display other properties of Rapport as needed -->
+
+      <!-- Transactions -->
+      <h4>Transactions:</h4>
+      <ul *ngIf="rapport.transactions && rapport.transactions.length > 0">
+        <li *ngFor="let transaction of rapport.transactions">
+          <p>Transaction ID: {{ transaction.transactionId }}</p>
+          <p>Amount: {{ transaction.amount }}</p>
+          <p>Description: {{ transaction.description }}</p>
+        </li>
+      </ul>
+
+      <!-- Changements -->
+      <h4>Changements:</h4>
+      <ul *ngIf="rapport.changements && rapport.changements.length > 0">
+        <li *ngFor="let changement of rapport.changements">
+          <p>Change ID: {{ changement.changeId }}</p>
+          <p>Change Description: {{ changement.changeDescription }}</p>
+          <p>Change Date: {{ changement.changeDate | date }}</p>
+        </li>
+      </ul>
+
+      <!-- Status History -->
+      <h4>Status History:</h4>
+      <ul *ngIf="rapport.statusHistory && rapport.statusHistory.length > 0">
+        <li *ngFor="let statusChange of rapport.statusHistory">
+          <p>Previous Status: {{ statusChange.previousStatus }}</p>
+          <p>Current Status: {{ statusChange.currentStatus }}</p>
+          <p>Change Date: {{ statusChange.changeDate | date }}</p>
+        </li>
+      </ul>
+
+      <!-- Other properties like summary, analysis, resolutionDetails, etc. can be displayed similarly -->
+    </li>
+  </ul>
+</div>
+
+<ng-template #noRapports>
+  <p>No rapports available.</p>
+</ng-template>

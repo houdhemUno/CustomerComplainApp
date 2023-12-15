@@ -22,7 +22,7 @@ export class RapportComponent implements OnInit {
   ngOnInit() { }
 
 
-  sideBarToggler() {
+  sideBarToggler(event: any) {
     this.sideBarOpen = !this.sideBarOpen;
   }
 
