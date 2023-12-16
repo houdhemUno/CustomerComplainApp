@@ -10,22 +10,24 @@ import { ReclamationService } from '../services/reclamation.service';
 
 @NgModule({
   declarations: [
-    ReclamationsComponent,
-    ReclamationDetailsComponent,
-    ReclamationFormComponent
+    // ReclamationsComponent,
+    // ReclamationDetailsComponent,
+    // ReclamationFormComponent
   ],
   imports: [
+    ReclamationsComponent,
+    ReclamationDetailsComponent,
+    ReclamationFormComponent,
     CommonModule,
     FormsModule,
     RouterModule.forChild([
       { path: 'reclamations', component: ReclamationsComponent },
       { path: 'reclamations/:id', component: ReclamationDetailsComponent },
       { path: 'creer-reclamation', component: ReclamationFormComponent },
-      { path: 'modifier-reclamation/:id', component: ReclamationFormComponent }
-    ])
+      { path: 'modifier-reclamation/:id', component: ReclamationFormComponent },
+    ]),
   ],
-  providers: [
-    ReclamationService
-  ]
+  providers: [ReclamationService],
+  exports: [],
 })
-export class ReclamationModule { }
+export class ReclamationModule {}

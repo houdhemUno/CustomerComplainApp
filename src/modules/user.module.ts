@@ -1,5 +1,3 @@
-// user.module.ts
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,23 +11,24 @@ import { UserService } from '../services/user.service';
 
 @NgModule({
   declarations: [
-    UsersComponent,
-    UserDetailsComponent,
-    UserFormComponent
+    // UsersComponent,
+    // UserDetailsComponent,
+    // UserFormComponent
   ],
   imports: [
+    UsersComponent,
+    UserDetailsComponent,
+    UserFormComponent,
     CommonModule,
     FormsModule,
     RouterModule.forChild([
-      { path: 'users', component: UsersComponent},
-      { path: 'user/:id', component: UserDetailsComponent},
-      { path: 'creer-user', component: UserFormComponent},
-      { path: 'modifier-user/:id', component: UserFormComponent}
-      
-    ])
+      { path: 'users', component: UsersComponent },
+      { path: 'user/:id', component: UserDetailsComponent },
+      { path: 'creer-user', component: UserFormComponent },
+      { path: 'modifier-user/:id', component: UserFormComponent },
+    ]),
   ],
-  providers: [
-    UserService
-  ]
+  providers: [UserService],
+  exports: [],
 })
-export class UserModule { }
+export class UserModule {}
