@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-historique',
@@ -9,6 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './historique.component.scss',
 })
 export class HistoriqueComponent {
+   constructor(private router: Router) { }
   reclamations = [
     {
       id_reclamation: 1,
@@ -66,4 +69,8 @@ export class HistoriqueComponent {
       id_livraison: 1,
     },
   ];
+  handleClick(event: Event, id_reclamation: number) {
+    console.log(`Reclamation ID: ${id_reclamation} was clicked.`);
+    this.router.navigate([`reclamation-detail-id/${id_reclamation}`]);
+  }
 }

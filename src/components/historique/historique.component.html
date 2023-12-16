@@ -24,6 +24,7 @@
       <td>{{ reclamation.id_produit }}</td>
       <td>{{ reclamation.id_commande }}</td>
       <td>{{ reclamation.id_livraison }}</td>
+      <td><button (click)="handleClick($event, reclamation.id_reclamation)">Click me</button></td>
     </tr>
   </tbody>
 </table>
