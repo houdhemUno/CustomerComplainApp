@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Sign up</mat-card-title>
+    <mat-card-subtitle>
+      Welcome to <span>Customer Relation</span>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-label> Enter your email address</mat-label>
+      <input matInput type="email" required /> </mat-form-field
+    ><br />
+    <mat-form-field>
+      <mat-label>Enter your user name</mat-label>
+      <input matInput />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" required />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>confirm your password</mat-label>
+      <input matInput type="password" required />
+    </mat-form-field>
+    <br />
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary">Sign up</button>
+  </mat-card-actions>
+</mat-card>
