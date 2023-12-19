@@ -9,7 +9,7 @@ import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { NotificationsComponent } from '../components/notifications/notifications.component';
+import { NotificationComponent } from '../components/notifications/notifications.component';
 
 
 export const routes: Routes = [    
@@ -25,5 +25,5 @@ export const routes: Routes = [
 {path: 'creer-user', component: UserFormComponent },    
 {path: 'modifier-user/:id', component: UserFormComponent },  
 {path: '**', component: PageNotFoundComponent },  
-{path: 'notifications', component: NotificationsComponent },
+{path: 'notifications', component: NotificationComponent },
 ];

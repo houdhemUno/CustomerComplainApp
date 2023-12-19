@@ -13,6 +13,7 @@ import { ValidationModule } from '../modules/validation.module';
 import { HistoryModule } from '../modules/history.module';
 
 import { AppComponent } from './app.component';
+import { NotificationsModule } from '../modules/notifications.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AppComponent } from './app.component';
     ManagementModule,
     ValidationModule,
     HistoryModule,
+    NotificationsModule,
   ],
  })
 export class AppModule { }
