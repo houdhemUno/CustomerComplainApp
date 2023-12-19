@@ -24,6 +24,7 @@ export const routes: Routes = [
 {path: 'user/:id', component: UserDetailsComponent },
 {path: 'creer-user', component: UserFormComponent },    
 {path: 'modifier-user/:id', component: UserFormComponent },  
-{path: '**', component: PageNotFoundComponent },  
 {path: 'notifications', component: NotificationComponent },
+
+{path: '**', component: PageNotFoundComponent },  
 ];
