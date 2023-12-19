@@ -9,9 +9,11 @@ import { RouterModule } from '@angular/router';
  imports: [NotificationComponent,
   
   RouterModule.forChild([
-      
+    {path: 'notifications', component: NotificationComponent },
+ 
   ])
-]
+],
+providers:[ NotificationsService]
 })
 export class NotificationsModule { }
 
