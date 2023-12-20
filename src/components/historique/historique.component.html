@@ -18,12 +18,19 @@
       <td>{{ reclamation.id_reclamation }}</td>
       <td>{{ reclamation.date_reclamation }}</td>
       <td>{{ reclamation.type_reclamation }}</td>
-      <td>{{ reclamation.etat_reclamation }}</td>
+      <td>
+        {{ reclamation.etat_reclamation }}
+        <select (change)="changeEtat(reclamation, $event.target.value)">
+          <option value="En Cours">En Cours</option>
+          <option value="Traitée">Traitée</option>
+        </select>
+      </td>
       <td>{{ reclamation.description_reclamation }}</td>
       <td>{{ reclamation.id_client }}</td>
       <td>{{ reclamation.id_produit }}</td>
       <td>{{ reclamation.id_commande }}</td>
       <td>{{ reclamation.id_livraison }}</td>
+      <td><button (click)="handleClick($event, reclamation.id_reclamation)">Click me</button></td>
     </tr>
   </tbody>
 </table>

@@ -1,6 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
+interface Reclamation {
+  id_reclamation: number;
+  date_reclamation: string;
+  type_reclamation: string;
+  etat_reclamation: string;
+  description_reclamation: string;
+  id_client: number;
+  id_produit: number;
+  id_commande: number;
+  id_livraison: number;
+}
 @Component({
   selector: 'app-historique',
   standalone: true,
@@ -9,6 +21,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './historique.component.scss',
 })
 export class HistoriqueComponent {
+   constructor(private router: Router) { }
   reclamations = [
     {
       id_reclamation: 1,
@@ -66,4 +79,11 @@ export class HistoriqueComponent {
       id_livraison: 1,
     },
   ];
+  handleClick(event: Event, id_reclamation: number) {
+    console.log(`Reclamation ID: ${id_reclamation} was clicked.`);
+    this.router.navigate([`reclamation-detail-id/${id_reclamation}`]);
+  }
+  changeEtat(reclamation: Reclamation, newState: string) {
+    reclamation.etat_reclamation = newState;
+  }
 }
