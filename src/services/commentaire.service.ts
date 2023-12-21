@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CommentService {
-  private commentUrl = 'https://api.monservice.com/comments'; // URL de votre API pour les commentaires
+  private commentUrl = 'https://api.monservice.com/comments'; 
 
   constructor(private http: HttpClient) {}
 
