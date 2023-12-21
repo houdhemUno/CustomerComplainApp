@@ -27,4 +27,5 @@ export class CommentService {
     return this.http.delete<any>(url);
   }
 
+  //getcomment
 }
