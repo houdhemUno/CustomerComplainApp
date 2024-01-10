@@ -1,0 +1,21 @@
+
+<div *ngIf="selectedReclamation">
+    <h3>Reclamation Details</h3>
+    <dl>
+      <dt>ID:</dt>
+      <dd>{{ selectedReclamation.id }}</dd>
+  
+      <dt>Sujet:</dt>
+      <dd>{{ selectedReclamation.sujet }}</dd>
+  
+      <dt>Description:</dt>
+      <dd>{{ selectedReclamation.description }}</dd>
+  
+      <dt>Date:</dt>
+      <dd>{{ selectedReclamation.date | date }}</dd>
+    </dl>
+  </div>
+  
+  <div *ngIf="!selectedReclamation">
+    <p>No reclamation selected</p>
+  </div>

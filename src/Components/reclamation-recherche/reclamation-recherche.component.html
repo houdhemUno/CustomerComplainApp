@@ -1,0 +1,12 @@
+<div>
+    <h3>Search Reclamations</h3>
+
+<form (submit)="searchReclamations()">
+  <label for="searchTerm">Search Term:</label>
+  <input type="text" id="searchTerm" name="searchTerm" [(ngModel)]="searchForm.value.searchTerm" />
+  <button type="submit">Search</button>
+</form>
+
+<app-reclamation-details [selectedReclamation]="selectedReclamation"></app-reclamation-details>
+
+  </div>

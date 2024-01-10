@@ -10,9 +10,7 @@ import { ReclamationService } from '../services/reclamation.service';
 
 @NgModule({
   declarations: [
-    // ReclamationsComponent,
-    // ReclamationDetailsComponent,
-    // ReclamationFormComponent
+    
 
   ],
   imports: [
