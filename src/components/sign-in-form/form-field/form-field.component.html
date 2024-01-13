@@ -1,0 +1,14 @@
+
+
+<div class="field">
+    <div class="inputwrapper">
+        <input matInput 
+            [type]="type||''"
+            [placeholder]="placeholder||''" 
+        />
+    </div>
+    <img
+        *ngIf="icon"
+        [src]="icon" alt=""
+    />
+</div>

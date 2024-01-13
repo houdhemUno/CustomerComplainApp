@@ -1,0 +1,28 @@
+.field{
+&{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:4.1406em;
+    padding:0 0.9375em;
+    background-color:var(--majorColor);
+    border-bottom:0.0781em solid var(--mainColor);
+}
+.inputwrapper{
+    flex:1;
+    height:100%;
+    overflow:hidden;
+}
+.inputwrapper>input{
+    width:100%;
+    height:100%;
+    font-size:inherit;
+    color:inherit;
+    background-color:transparent;
+    border:none;
+    outline:none;
+}
+.inputwrapper>input:focus,.inputwrapper>input:focus::placeholder{
+    color:var(--mainColor);
+}
+}

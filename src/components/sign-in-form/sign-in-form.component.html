@@ -1,1 +1,18 @@
-<p>sign-in-form works!</p>
+
+
+<form class="signinform">
+    <h3 class="title">Sign in</h3>
+    <p class="greeting">welcome back to <span>customer relation</span></p>
+    <fieldset>
+        <form-field *ngFor="let field of fields"
+            [type]="field.id"
+            [placeholder]="field.placeholder" 
+            [icon]="field.id==='password'?'assets/Svgs/Eye_0.svg':''"
+        />
+        <div class="fpsection">
+            <mat-checkbox>Remember me</mat-checkbox>
+            <p>forget password ?</p>
+        </div>
+        <button (click)="onLogin()" class="loginbtn">login</button>
+    </fieldset>
+</form>
