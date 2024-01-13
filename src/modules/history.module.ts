@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-
-@NgModule({
-  declarations: [],
-  imports: [CommonModule, RouterModule],
-  providers: [],
-  exports: [],
-})
-export class HistoryModule {}
+export interface Historique_Rec {
+  id: number,
+  date: string,
+  action: string,
+  id_utilisateur?: number,
+  id_reclamation: number,
+  etat: string,
+  id_client: number,
+  id_produit: number,
+  id_commande?: number,
+  id_livraison?: number,
+}
