@@ -23,14 +23,12 @@ import { PageNotFoundComponent } from '../components/page-not-found/page-not-fou
 import { LandingComponent } from '../components/landing/landing.component';
 import { SignInFormComponent } from '../components/sign-in-form/sign-in-form.component';
 import { AboutUsComponent } from '../components/about-us/about-us.component';
+import { SignUpFormComponent } from '../components/sign-up-form/sign-up-form.component';
 
 export const routes: Routes = [    
-<<<<<<< HEAD
 {path: '', redirectTo: '/home', pathMatch: 'full' },
 {path: 'home', component: LandingComponent },
-=======
-{path: '', component:SignInFormComponent /* LandingComponent */  },
->>>>>>> ahmedayachi
+{path: 'signup', component:SignUpFormComponent /* LandingComponent */  },
 {path: 'reclamations', component: ReclamationsComponent },
 {path: 'reclamation/:id', component: ReclamationDetailsComponent },
 {path: 'creer-reclamation', component: ReclamationFormComponent },
