@@ -20,6 +20,8 @@ Le module `user.module.ts` est dédié à la gestion des utilisateurs. Il inclut
 
 ### Routes (`routing.module.ts`)
 
+> **Important**: le module route est maintenant défini dans le dossier "/app" sous le nom "app.routes.ts"
+
 Le module `routing.module.ts` définit les routes de l'application, permettant la navigation entre les différentes pages. Il utilise le routeur Angular pour gérer la navigation de manière efficace.
 
 [![Aide Routes](https://img.shields.io/badge/Aide-Routes-red)](#)
