@@ -4,20 +4,23 @@
     <tr>
       <th scope="col">id</th>
       <th scope="col">date</th>
-      <th scope="col">type</th>
-      <th scope="col">etat</th>
-      <th scope="col">description</th>
+      <th scope="col">action</th>
+      <th scope="col">id_utilisateur</th>
+      <th scope="col">id_reclamation</th>
+      <th scope="col">Audit_rec</th>
+      <th scope="col">etat_Audit</th>
       <th scope="col">id_client</th>
       <th scope="col">id_produit</th>
-      <th scope="col">id_commande</th>
-      <th scope="col">id_livraison</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let reclamation of reclamations">
       <td>{{ reclamation.id }}</td>
       <td>{{ reclamation.date }}</td>
-      <td>{{ reclamation.type }}</td>
+      <td>{{ reclamation.action }}</td>
+      <td>{{ reclamation.id_utilisateur }}</td>
+      <td>{{ reclamation.id_reclamation }}</td>
+      <td><button (click)="audit(reclamation.id_reclamation)">Audit</button></td>
       <td>
         {{ reclamation.etat }}
         <!-- <select (change)="changeEtat(reclamation, $event.target.value)">
@@ -29,12 +32,38 @@
           <option [value]="etat.name" *ngFor="let etat of etats">{{etat.name}}</option>
         </select>
       </td>
-      <td>{{ reclamation.description }}</td>
       <td>{{ reclamation.id_client }}</td>
       <td>{{ reclamation.id_produit }}</td>
-      <td>{{ reclamation.id_commande }}</td>
-      <td>{{ reclamation.id_livraison }}</td>
-      <td><button (click)="handleClick($event, reclamation.id)">Click me</button></td>
+      <td><button (click)="handleClick($event, reclamation.id)">Exit</button></td>
     </tr>
   </tbody>
 </table>
+
+<div *ngIf="auditOn">
+<h1>Resultats Audit</h1>
+<h3>Historique du Réclamation d'index : {{ auditIndex }}</h3>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">date</th>
+      <th scope="col">action</th>
+      <th scope="col">id_utilisateur</th>
+      <th scope="col">id_reclamation</th>
+      <th scope="col">id_client</th>
+      <th scope="col">id_produit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let reclamation of filtered_Rec">
+      <td>{{ reclamation.id }}</td>
+      <td>{{ reclamation.date }}</td>
+      <td>{{ reclamation.action }}</td>
+      <td>{{ reclamation.id_utilisateur }}</td>
+      <td>{{ reclamation.id_reclamation }}</td>
+      <td>{{ reclamation.id_client }}</td>
+      <td>{{ reclamation.id_produit }}</td>
+     </tr>
+  </tbody>
+</table>
+</div>
