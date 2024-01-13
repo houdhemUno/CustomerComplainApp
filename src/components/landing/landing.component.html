@@ -1,9 +1,13 @@
-<p>
-    landing works!
-</p>
-
-<h2>Welcome to the Landing Page</h2>
-<button (click)="login()">Login</button>
-<button (click)="signup()">Signup</button>
+<h2>Bienvenue au service client</h2>
+<div class="container">
+    <button (click)="signup()">S'inscrire</button>
+    <button (click)="login()">Se connecter</button>
+</div>
 <!-- <button (click)="signup()">Signup</button> -->
+<div *ngIf="!signupError">
+    <p>please verify your informations </p>
+  </div>
+  <div *ngIf="!loginError">
+    <p>please verify your informations </p>
+  </div>
 

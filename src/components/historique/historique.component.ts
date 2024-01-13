@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { Historique_Rec } from '../../modules/history.module';
+import { HistoriqueService } from '../../services/historique.service';
+import { log } from 'console';
 
 @Component({
   selector: 'app-historique',
@@ -8,62 +12,41 @@ import { CommonModule } from '@angular/common';
   templateUrl: './historique.component.html',
   styleUrl: './historique.component.scss',
 })
+
 export class HistoriqueComponent {
-  reclamations = [
-    {
-      id_reclamation: 1,
-      date_reclamation: '2021-06-01',
-      type_reclamation: 'Produit',
-      etat_reclamation: 'En cours',
-      description_reclamation: 'Le produit est cassé',
-      id_client: 1,
-      id_produit: 1,
-      id_commande: 1,
-      id_livraison: 1,
-    },
-    {
-      id_reclamation: 2,
-      date_reclamation: '2021-06-01',
-      type_reclamation: 'Produit',
-      etat_reclamation: 'En cours',
-      description_reclamation: 'Le produit est cassé',
-      id_client: 1,
-      id_produit: 1,
-      id_commande: 1,
-      id_livraison: 1,
-    },
-    {
-      id_reclamation: 3,
-      date_reclamation: '2021-06-01',
-      type_reclamation: 'Produit',
-      etat_reclamation: 'Traitée',
-      description_reclamation: 'Le produit est cassé',
-      id_client: 1,
-      id_produit: 1,
-      id_commande: 1,
-      id_livraison: 1,
-    },
-    {
-      id_reclamation: 4,
-      date_reclamation: '2021-06-01',
-      type_reclamation: 'Produit',
-      etat_reclamation: 'En cours',
-      description_reclamation: 'Le produit est cassé',
-      id_client: 1,
-      id_produit: 1,
-      id_commande: 1,
-      id_livraison: 1,
-    },
-    {
-      id_reclamation: 5,
-      date_reclamation: '2021-06-01',
-      type_reclamation: 'Produit',
-      etat_reclamation: 'Traitée',
-      description_reclamation: 'Le produit est cassé',
-      id_client: 1,
-      id_produit: 1,
-      id_commande: 1,
-      id_livraison: 1,
-    },
+
+  //an array of only historique model
+  reclamations!: Array<Historique_Rec>;
+  //fetching the data from the historique service
+  constructor(private historiqueService:HistoriqueService ,private router: Router) { 
+    this.reclamations=historiqueService.historiqueList;
+  }
+  
+  auditOn = false;
+  auditIndex!:number;
+  filtered_Rec!: Array<Historique_Rec>;
+
+  etats = [
+    { name: "Non validée" },
+    { name: "En cours" },
+    { name: "Validée" }
   ];
+
+  handleClick(event: Event, id: number) {
+    console.log(`Reclamation ID: ${id} was clicked.`);
+    this.router.navigate([`reclamation-detail-id/${id}`]);
+  }
+
+  changeState(reclamation: Historique_Rec, event: Event) {
+    const currentTarget = event.target as HTMLSelectElement;
+    reclamation.etat = currentTarget.value;
+  }
+
+  audit(Rec_index:number){
+    this.auditOn = true;
+    this.auditIndex = Rec_index;
+    this.filtered_Rec = this.reclamations.filter((reclamation) => reclamation.id_reclamation===Rec_index);
+    console.log(this.filtered_Rec);
+  }    
+
 }

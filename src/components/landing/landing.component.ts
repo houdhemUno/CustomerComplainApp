@@ -10,23 +10,49 @@ import { Router } from '@angular/router';
   styleUrl: './landing.component.scss'
 })
 export class LandingComponent {
-  constructor(private router: Router) { }
+  authenticationToken : String;
+  loginError : boolean;
+  signupError : boolean;
+  constructor(private router: Router) { 
+  this.authenticationToken = "";
+  this.loginError = true;
+  this.signupError = true;
+  }
 
   login() {
     console.log('Login button clicked');
     // Add logic for login
-    this.router.navigate(['/login']); // Navigate to "/login"
+    this.authenticationToken =this.authenticate();
+    if(this.authenticationToken != ""){
+      this.router.navigate(['/login']); // Navigate to "/login"
+    }
+    else{
+      this.router.navigate(['']); // rester sur ce component dans le cas ou authenticationToken est vide
+      this.loginError = false;
+      console.log('loginfail');
+    }
+    
   }
 
   signup() {
-    console.log('Signup button clicked');
-    // Add logic for signup
-    this.router.navigate(['/login']); // Navigate to "/signup"
+    this.authenticationToken =this.authenticate();
+    if(this.authenticationToken != ""){
+      this.router.navigate(['/login']); // Navigate to "/login"
+    }
+    else{
+      this.router.navigate(['']); // rester sur ce component dans le cas ou authenticationToken est vide
+      this.signupError = false;
+      console.log('signup fail');
+    }
   }
 
   newComplaint(){
     console.log('Add new complaint');
     // this.router.navigate(['/complaint']);
-
+  
+  
+  }
+  authenticate(){
+    return "autorization Token"; // à changer avec un service d'authentification avec Http Client dans le cas de communication avec backend
   }
 }
