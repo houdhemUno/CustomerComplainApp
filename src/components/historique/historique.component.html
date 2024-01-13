@@ -2,11 +2,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">id_reclamation</th>
-      <th scope="col">date_reclamation</th>
-      <th scope="col">type_reclamation</th>
-      <th scope="col">etat_reclamation</th>
-      <th scope="col">description_reclamation</th>
+      <th scope="col">id</th>
+      <th scope="col">date</th>
+      <th scope="col">type</th>
+      <th scope="col">etat</th>
+      <th scope="col">description</th>
       <th scope="col">id_client</th>
       <th scope="col">id_produit</th>
       <th scope="col">id_commande</th>
@@ -15,15 +15,26 @@
   </thead>
   <tbody>
     <tr *ngFor="let reclamation of reclamations">
-      <td>{{ reclamation.id_reclamation }}</td>
-      <td>{{ reclamation.date_reclamation }}</td>
-      <td>{{ reclamation.type_reclamation }}</td>
-      <td>{{ reclamation.etat_reclamation }}</td>
-      <td>{{ reclamation.description_reclamation }}</td>
+      <td>{{ reclamation.id }}</td>
+      <td>{{ reclamation.date }}</td>
+      <td>{{ reclamation.type }}</td>
+      <td>
+        {{ reclamation.etat }}
+        <!-- <select (change)="changeEtat(reclamation, $event.target.value)">
+          <option value="En Cours">En Cours</option>
+          <option value="Traitée">Traitée</option>
+        </select> -->
+        <select name="reclamation" (change)="changeState(reclamation, $event)" >
+          <option>--SELECT--</option>
+          <option [value]="etat.name" *ngFor="let etat of etats">{{etat.name}}</option>
+        </select>
+      </td>
+      <td>{{ reclamation.description }}</td>
       <td>{{ reclamation.id_client }}</td>
       <td>{{ reclamation.id_produit }}</td>
       <td>{{ reclamation.id_commande }}</td>
       <td>{{ reclamation.id_livraison }}</td>
+      <td><button (click)="handleClick($event, reclamation.id)">Click me</button></td>
     </tr>
   </tbody>
 </table>

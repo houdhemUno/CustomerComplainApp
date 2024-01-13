@@ -1,5 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+
+interface Reclamation {
+  id: number;
+  date: string;
+  type: string;
+  etat: string;
+  description: string;
+  id_client: number;
+  id_produit: number;
+  id_commande: number;
+  id_livraison: number;
+}
 
 @Component({
   selector: 'app-historique',
@@ -9,61 +22,78 @@ import { CommonModule } from '@angular/common';
   styleUrl: './historique.component.scss',
 })
 export class HistoriqueComponent {
+  constructor(private router: Router) { }
+
   reclamations = [
     {
-      id_reclamation: 1,
-      date_reclamation: '2021-06-01',
-      type_reclamation: 'Produit',
-      etat_reclamation: 'En cours',
-      description_reclamation: 'Le produit est cassé',
+      id: 1,
+      date: '2021-06-01',
+      type: 'Produit',
+      etat: 'En cours',
+      description: 'Le produit est cassé',
       id_client: 1,
       id_produit: 1,
       id_commande: 1,
       id_livraison: 1,
     },
     {
-      id_reclamation: 2,
-      date_reclamation: '2021-06-01',
-      type_reclamation: 'Produit',
-      etat_reclamation: 'En cours',
-      description_reclamation: 'Le produit est cassé',
+      id: 2,
+      date: '2021-06-01',
+      type: 'Produit',
+      etat: 'En cours',
+      description: 'Le produit est cassé',
       id_client: 1,
       id_produit: 1,
       id_commande: 1,
       id_livraison: 1,
     },
     {
-      id_reclamation: 3,
-      date_reclamation: '2021-06-01',
-      type_reclamation: 'Produit',
-      etat_reclamation: 'Traitée',
-      description_reclamation: 'Le produit est cassé',
+      id: 3,
+      date: '2021-06-01',
+      type: 'Produit',
+      etat: 'Traitée',
+      description: 'Le produit est cassé',
       id_client: 1,
       id_produit: 1,
       id_commande: 1,
       id_livraison: 1,
     },
     {
-      id_reclamation: 4,
-      date_reclamation: '2021-06-01',
-      type_reclamation: 'Produit',
-      etat_reclamation: 'En cours',
-      description_reclamation: 'Le produit est cassé',
+      id: 4,
+      date: '2021-06-01',
+      type: 'Produit',
+      etat: 'En cours',
+      description: 'Le produit est cassé',
       id_client: 1,
       id_produit: 1,
       id_commande: 1,
       id_livraison: 1,
     },
     {
-      id_reclamation: 5,
-      date_reclamation: '2021-06-01',
-      type_reclamation: 'Produit',
-      etat_reclamation: 'Traitée',
-      description_reclamation: 'Le produit est cassé',
+      id: 5,
+      date: '2021-06-01',
+      type: 'Produit',
+      etat: 'Traitée',
+      description: 'Le produit est cassé',
       id_client: 1,
       id_produit: 1,
       id_commande: 1,
       id_livraison: 1,
     },
   ];
+
+  etats = [
+    { name: "En Cours" },
+    { name: "Traitée" }
+  ];
+
+  handleClick(event: Event, id: number) {
+    console.log(`Reclamation ID: ${id} was clicked.`);
+    this.router.navigate([`reclamation-detail-id/${id}`]);
+  }
+
+  changeState(reclamation: Reclamation, event: Event) {
+    const currentTarget = event.target as HTMLSelectElement;
+    reclamation.etat = currentTarget.value;
+  }
 }
