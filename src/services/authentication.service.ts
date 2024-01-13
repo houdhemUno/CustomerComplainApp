@@ -1,15 +1,9 @@
 import { Observable, BehaviorSubject } from 'rxjs';
 
-
-export class AuthenticationService 
-{
-  
+export class AuthenticationService {
   login(username: string, password: string) {
-    
-   // Appel à votre API pour la validation des identifiants
-      }
-      
-    
+    // Appel à votre API pour la validation des identifiants
+  }
 
   logout(): void {
     // Logique de déconnexion
@@ -20,9 +14,8 @@ export class AuthenticationService
   // Méthodes pour la gestion des jetons, la vérification de session.
   getAccessToken(): string | null {
     // Retourne le token d'accès depuis le stockage (localStorage, sessionStorage, etc.)
-    return null
+    return null;
   }
-
 
   verifySession(): boolean {
     // Vérifie la validité de la session côté client
@@ -35,5 +28,4 @@ export class AuthenticationService
     }
     return false; // Pas de session valide
   }
-
 }
