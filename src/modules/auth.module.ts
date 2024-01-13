@@ -8,20 +8,16 @@ import { AuthenticationService } from '../services/authentication.service';
 
 @NgModule({
   declarations: [
-    LoginComponent
+    // LoginComponent
   ],
+
   imports: [
+    LoginComponent,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([
-      { path: 'login', component: LoginComponent }
-    ])
+    RouterModule.forChild([{ path: 'login', component: LoginComponent }]),
   ],
-  providers: [
-    AuthenticationService
-  ],
-  exports: [
-    LoginComponent 
-  ]
+  providers: [AuthenticationService],
+  exports: [LoginComponent],
 })
-export class AuthModule { }
+export class AuthModule {}

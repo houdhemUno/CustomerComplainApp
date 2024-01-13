@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
  // Import the main routing module
 
 import { ReclamationModule } from '../modules/reclamation.module';
@@ -16,9 +17,10 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    // AppComponent
   ],
   imports: [
+    AppComponent,
     BrowserModule,
      // Include the main routing module
     ReclamationModule,
@@ -31,6 +33,5 @@ import { AppComponent } from './app.component';
     ValidationModule,
     HistoryModule,
   ],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }

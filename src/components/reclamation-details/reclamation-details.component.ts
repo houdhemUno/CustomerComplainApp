@@ -6,8 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './reclamation-details.component.html',
-  styleUrl: './reclamation-details.component.scss'
+  styleUrl: './reclamation-details.component.scss',
 })
-export class ReclamationDetailsComponent {
-
-}
+export class ReclamationDetailsComponent {}
