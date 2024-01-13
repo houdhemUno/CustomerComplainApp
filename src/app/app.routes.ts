@@ -22,7 +22,7 @@ import { UserFormComponent } from '../components/user-form/user-form.component';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
 import { LandingComponent } from '../components/landing/landing.component';
 import { SignInFormComponent } from '../components/sign-in-form/sign-in-form.component';
-
+import { AboutUsComponent } from '../components/about-us/about-us.component';
 
 export const routes: Routes = [    
 <<<<<<< HEAD
@@ -43,5 +43,6 @@ export const routes: Routes = [
 {path: 'creer-user', component: UserFormComponent },    
 {path: 'modifier-user/:id', component: UserFormComponent }, 
 {path: 'notifications', component: NotificationsComponent },
-{path: '**', redirectTo: '/home', pathMatch: 'full' },  
+{path: '**', redirectTo: '/home', pathMatch: 'full' },
+{ path: 'about-us', component: AboutUsComponent },
 ];
