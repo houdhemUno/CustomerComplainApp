@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, div { height: 100%; }
+
+div { 
+    width:94%;
+    position: absolute;
+    // width:100%;
+    height: 100%;
+    background-image: linear-gradient(rgb(27, 69, 160) 1%, lightgrey);
+    margin: 0;
+    padding-left:3%;
+    padding-right: 3%;
+    // overflow: hidden;
+    // background-attachment: local;
+
+    // background-attachment: fixed;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+dl{
+    margin:auto;
+    background-color:white;
+    padding:24px;
+    width: 75%;
+    border-radius: 8px;
+    box-shadow: 2px 2px rgb(138, 137, 137);
+
+    
+    ;
+}
+div p{
+    color:white;
+    text-align: center;
+}
+
+div h3{
+    color:white;
+    text-align: center;
+    margin: 42px;
+    font-weight: bold;
+}
+dt{
+    color: rgb(3, 15, 122);
+    display: inline;
+    width: 5%;
+
+}
+dd{
+    display: inline;
+    width: 90%;
+    color:rgb(29, 28, 28)
+}
+span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 24px;;
+
+}
