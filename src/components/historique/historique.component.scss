@@ -5,6 +5,7 @@ h1 {
 }
 
 .table {
+    width: 100%;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -17,9 +18,6 @@ h1 {
       text-transform: uppercase;
       letter-spacing: 0.03em;
       box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
-      th+th{
-        margin-left: 10px;
-      }
     }
 
     tbody{
@@ -33,10 +31,11 @@ h1 {
     }
     
     tr {
+        justify-content: space-between;        
         display:flex;
         padding:10px;
     }
-    
+
     td {
       flex-basis: 20%;
     }
@@ -56,4 +55,11 @@ button {
 button:hover, button:active {
   color: #283593;
   background-color: #E8EAF6;
+}
+
+select{
+  width: auto;
+  border: solid 1px  #283593;
+  color: #283593;
+  text-align: center;
 }
