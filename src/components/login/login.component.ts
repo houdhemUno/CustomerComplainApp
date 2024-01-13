@@ -8,4 +8,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
-export class LoginComponent {}
+export class LoginComponent {
+  status: boolean = false;
+  clickSignUp(){
+      this.status = true;       
+  }
+  clickSignIn(){
+    this.status = false;       
+}
+}
