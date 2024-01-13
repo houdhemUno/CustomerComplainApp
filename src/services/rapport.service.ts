@@ -11,7 +11,7 @@ export class ReportGenerationService {
   constructor(private http: HttpClient) {}
 
   // Méthode pour récupérer les données de réclamation depuis l'API
-  // getAllReclamations(): Observable<any[]> { }
+   //getAllReclamations(): Observable<any[]> { }
 
   // Méthode pour générer des rapports détaillés sur les réclamations
   generateDetailedReport(reclamations: any[]): any {
@@ -20,8 +20,6 @@ export class ReportGenerationService {
     // Retournez les rapports générés
     // Par exemple :
     // - Calculez les statistiques (nombre total, par type, par statut, etc.)
-    // - Créez des graphiques basés sur ces statistiques
-    // - Formatez les données pour générer un rapport détaillé
-    // - Retournez les rapports
+   
   }
 }

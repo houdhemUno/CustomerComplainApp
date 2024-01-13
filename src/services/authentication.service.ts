@@ -1,6 +1,8 @@
 import { Observable, BehaviorSubject } from 'rxjs';
 
 export class AuthenticationService {
+
+
   login(username: string, password: string) {
     // Appel à votre API pour la validation des identifiants
   }
@@ -8,7 +10,7 @@ export class AuthenticationService {
   logout(): void {
     // Logique de déconnexion
     // Effacer les tokens, les sessions, etc.
-    // Autre logique de suppression de token, session, etc
+    // Autre logique de suppression de token, session
   }
 
   // Méthodes pour la gestion des jetons, la vérification de session.
@@ -28,4 +30,5 @@ export class AuthenticationService {
     }
     return false; // Pas de session valide
   }
+
 }
