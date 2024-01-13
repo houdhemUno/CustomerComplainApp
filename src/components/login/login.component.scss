@@ -55,6 +55,12 @@ button.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
+button:disabled {
+	background-color: #C5CAE9;
+	border-color: whitesmoke;
+}
+
+
 
 form {
 	background-color: #FFFFFF;

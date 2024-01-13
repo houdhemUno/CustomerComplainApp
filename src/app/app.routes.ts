@@ -11,14 +11,14 @@ import { UserDetailsComponent } from '../components/user-details/user-details.co
 import { UserFormComponent } from '../components/user-form/user-form.component';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
 import { LandingComponent } from '../components/landing/landing.component';
-import { SignInFormComponent } from '../components/sign-in-form/sign-in-form.component';
+// import { SignInFormComponent } from '../components/sign-in-form/sign-in-form.component';
 import { AboutUsComponent } from '../components/about-us/about-us.component';
-import { SignUpFormComponent } from '../components/sign-up-form/sign-up-form.component';
+// import { SignUpFormComponent } from '../components/sign-up-form/sign-up-form.component';
 
 export const routes: Routes = [    
 {path: '', redirectTo: '/home', pathMatch: 'full' },
 {path: 'home', component: LandingComponent },
-{path: 'signup', component:SignUpFormComponent /* LandingComponent */  },
+// {path: 'signup', component:SignUpFormComponent /* LandingComponent */  },
 {path: 'reclamations', component: ReclamationsComponent },
 {path: 'reclamation/:id', component: ReclamationDetailsComponent },
 {path: 'creer-reclamation', component: ReclamationFormComponent },
