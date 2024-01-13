@@ -19,13 +19,12 @@
       <td>{{ reclamation.date }}</td>
       <td>{{ reclamation.type }}</td>
       <td>
-        {{ reclamation.etat }}
         <!-- <select (change)="changeEtat(reclamation, $event.target.value)">
           <option value="En Cours">En Cours</option>
           <option value="Traitée">Traitée</option>
         </select> -->
         <select name="reclamation" (change)="changeState(reclamation, $event)" >
-          <option>--SELECT--</option>
+          <option>Choisir Etat</option>
           <option [value]="etat.name" *ngFor="let etat of etats">{{etat.name}}</option>
         </select>
       </td>
