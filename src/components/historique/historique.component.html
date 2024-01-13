@@ -14,13 +14,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let reclamation of reclamations; let index=index">
+    <tr *ngFor="let reclamation of reclamations">
       <td>{{ reclamation.id }}</td>
       <td>{{ reclamation.date }}</td>
       <td>{{ reclamation.action }}</td>
       <td>{{ reclamation.id_utilisateur }}</td>
       <td>{{ reclamation.id_reclamation }}</td>
-      <td><button (click)="audit(index)">Audit</button></td>
+      <td><button (click)="audit(reclamation.id_reclamation)">Audit</button></td>
       <td>
         {{ reclamation.etat }}
         <!-- <select (change)="changeEtat(reclamation, $event.target.value)">
@@ -38,3 +38,32 @@
     </tr>
   </tbody>
 </table>
+
+<div *ngIf="auditOn">
+<h1>Resultats Audit</h1>
+<h3>Historique du Réclamation d'index : {{ auditIndex }}</h3>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">date</th>
+      <th scope="col">action</th>
+      <th scope="col">id_utilisateur</th>
+      <th scope="col">id_reclamation</th>
+      <th scope="col">id_client</th>
+      <th scope="col">id_produit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let reclamation of filtered_Rec">
+      <td>{{ reclamation.id }}</td>
+      <td>{{ reclamation.date }}</td>
+      <td>{{ reclamation.action }}</td>
+      <td>{{ reclamation.id_utilisateur }}</td>
+      <td>{{ reclamation.id_reclamation }}</td>
+      <td>{{ reclamation.id_client }}</td>
+      <td>{{ reclamation.id_produit }}</td>
+     </tr>
+  </tbody>
+</table>
+</div>

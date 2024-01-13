@@ -21,6 +21,10 @@ export class HistoriqueComponent {
   constructor(private historiqueService:HistoriqueService ,private router: Router) { 
     this.reclamations=historiqueService.historiqueList;
   }
+  
+  auditOn = false;
+  auditIndex!:number;
+  filtered_Rec!: Array<Historique_Rec>;
 
   etats = [
     { name: "Non validée" },
@@ -38,8 +42,11 @@ export class HistoriqueComponent {
     reclamation.etat = currentTarget.value;
   }
 
-  audit(index:number){
-    console.log(index);
-  }
+  audit(Rec_index:number){
+    this.auditOn = true;
+    this.auditIndex = Rec_index;
+    this.filtered_Rec = this.reclamations.filter((reclamation) => reclamation.id_reclamation===Rec_index);
+    console.log(this.filtered_Rec);
+  }    
 
 }
