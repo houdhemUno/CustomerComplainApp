@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "646746b9067d25502e1c9c26"
+  },
+  "email": "kammounomarindus@gmail.com",
+  "password": "$2b$10$96XYQ0C4BD3FqqPujWjTN.PAI0yzJBQhTUSQkZsjtq7Do.0qD2IpK",
+  "confirmpassword": "$2b$10$tBtUAFdsu4rQKa7GigsT4OW4k/2bVzJ11gqEX4LCwfPdK57oPJ0WG",
+  "firstname": "omar",
+  "lastname": "kammoun",
+  "civilite": "Monsieur",
+  "role": "admin",
+  "connected": false,
+  "desactive": {
+    "statut": false,
+    "date": {
+      "$date": "2023-05-19T09:51:53.913Z"
+    }
+  },
+  "created": {
+    "$date": "2023-05-19T09:51:53.650Z"
+  },
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDY3NDZiOTA2N2QyNTUwMmUxYzljMjYiLCJpYXQiOjE3MDAwNzU2MjQsImV4cCI6MjU2NDA3NTYyNH0.EgKLVw82VG_67eZsCiAwXD9Agl13DSAbfPfvPA8z0fg",
+  "__v": 1,
+  "updated": {
+    "$date": "2023-05-19T09:55:01.773Z"
+  },
+  "habilitation": []
+}]
