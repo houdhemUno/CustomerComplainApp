@@ -21,11 +21,16 @@ import { UserDetailsComponent } from '../components/user-details/user-details.co
 import { UserFormComponent } from '../components/user-form/user-form.component';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
 import { LandingComponent } from '../components/landing/landing.component';
+import { SignInFormComponent } from '../components/sign-in-form/sign-in-form.component';
 
 
 export const routes: Routes = [    
+<<<<<<< HEAD
 {path: '', redirectTo: '/home', pathMatch: 'full' },
 {path: 'home', component: LandingComponent },
+=======
+{path: '', component:SignInFormComponent /* LandingComponent */  },
+>>>>>>> ahmedayachi
 {path: 'reclamations', component: ReclamationsComponent },
 {path: 'reclamation/:id', component: ReclamationDetailsComponent },
 {path: 'creer-reclamation', component: ReclamationFormComponent },
