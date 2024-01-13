@@ -1,18 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-
-interface Reclamation {
-  id: number;
-  date: string;
-  type: string;
-  etat: string;
-  description: string;
-  id_client: number;
-  id_produit: number;
-  id_commande: number;
-  id_livraison: number;
-}
+import { Historique_Rec } from '../../modules/history.module';
+import { HistoriqueService } from '../../services/historique.service';
+import { log } from 'console';
 
 @Component({
   selector: 'app-historique',
@@ -21,70 +12,20 @@ interface Reclamation {
   templateUrl: './historique.component.html',
   styleUrl: './historique.component.scss',
 })
-export class HistoriqueComponent {
-  constructor(private router: Router) { }
 
-  reclamations = [
-    {
-      id: 1,
-      date: '2021-06-01',
-      type: 'Produit',
-      etat: 'En cours',
-      description: 'Le produit est cassé',
-      id_client: 1,
-      id_produit: 1,
-      id_commande: 1,
-      id_livraison: 1,
-    },
-    {
-      id: 2,
-      date: '2021-06-01',
-      type: 'Produit',
-      etat: 'En cours',
-      description: 'Le produit est cassé',
-      id_client: 1,
-      id_produit: 1,
-      id_commande: 1,
-      id_livraison: 1,
-    },
-    {
-      id: 3,
-      date: '2021-06-01',
-      type: 'Produit',
-      etat: 'Traitée',
-      description: 'Le produit est cassé',
-      id_client: 1,
-      id_produit: 1,
-      id_commande: 1,
-      id_livraison: 1,
-    },
-    {
-      id: 4,
-      date: '2021-06-01',
-      type: 'Produit',
-      etat: 'En cours',
-      description: 'Le produit est cassé',
-      id_client: 1,
-      id_produit: 1,
-      id_commande: 1,
-      id_livraison: 1,
-    },
-    {
-      id: 5,
-      date: '2021-06-01',
-      type: 'Produit',
-      etat: 'Traitée',
-      description: 'Le produit est cassé',
-      id_client: 1,
-      id_produit: 1,
-      id_commande: 1,
-      id_livraison: 1,
-    },
-  ];
+export class HistoriqueComponent {
+
+  //an array of only historique model
+  reclamations!: Array<Historique_Rec>;
+  //fetching the data from the historique service
+  constructor(private historiqueService:HistoriqueService ,private router: Router) { 
+    this.reclamations=historiqueService.historiqueList;
+  }
 
   etats = [
-    { name: "En Cours" },
-    { name: "Traitée" }
+    { name: "Non validée" },
+    { name: "En cours" },
+    { name: "Validée" }
   ];
 
   handleClick(event: Event, id: number) {
@@ -92,8 +33,13 @@ export class HistoriqueComponent {
     this.router.navigate([`reclamation-detail-id/${id}`]);
   }
 
-  changeState(reclamation: Reclamation, event: Event) {
+  changeState(reclamation: Historique_Rec, event: Event) {
     const currentTarget = event.target as HTMLSelectElement;
     reclamation.etat = currentTarget.value;
   }
+
+  audit(index:number){
+    console.log(index);
+  }
+
 }
