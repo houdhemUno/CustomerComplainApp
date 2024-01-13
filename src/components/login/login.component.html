@@ -1,1 +1,47 @@
-<p>login works!</p>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Creer un compte</h1>
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+			<button>S'inscrire</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Se connecter</h1>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<a href="#">Mot de passe oublie?</a>
+			<button>Se connecter</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Vous avez un compte?</h1>
+				<p>Se connecter via votre email et mot de passe</p>
+				<button class="ghost" id="signIn">Se connecter</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>C'est votre premiere reclamation?</h1>
+				<p>Entrez votre nom et email avant de commencer</p>
+				<button class="ghost" id="signUp">S'inscrire</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+</script>
