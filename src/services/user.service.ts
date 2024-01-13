@@ -1,15 +1,7 @@
 export class UserService {
-  
+  getUsers() {}
 
-  getUsers() {
-   
-  }
+  updateUser(user: any) {}
 
-  updateUser(user: any) {
-   
-  }
-
-  deleteUser(userId: number) {
-   
-  }
+  deleteUser(userId: number) {}
 }
