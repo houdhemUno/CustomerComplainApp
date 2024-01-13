@@ -21,10 +21,16 @@ import { UserDetailsComponent } from '../components/user-details/user-details.co
 import { UserFormComponent } from '../components/user-form/user-form.component';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
 import { LandingComponent } from '../components/landing/landing.component';
+import { SignInFormComponent } from '../components/sign-in-form/sign-in-form.component';
 
 
 export const routes: Routes = [    
-{path: '', component: LandingComponent  },
+<<<<<<< HEAD
+{path: '', redirectTo: '/home', pathMatch: 'full' },
+{path: 'home', component: LandingComponent },
+=======
+{path: '', component:SignInFormComponent /* LandingComponent */  },
+>>>>>>> ahmedayachi
 {path: 'reclamations', component: ReclamationsComponent },
 {path: 'reclamation/:id', component: ReclamationDetailsComponent },
 {path: 'creer-reclamation', component: ReclamationFormComponent },
@@ -35,7 +41,7 @@ export const routes: Routes = [
 {path: 'users', component: UsersComponent },
 {path: 'user/:id', component: UserDetailsComponent },
 {path: 'creer-user', component: UserFormComponent },    
-{path: 'modifier-user/:id', component: UserFormComponent },  
-{path: '**', component: PageNotFoundComponent },  
+{path: 'modifier-user/:id', component: UserFormComponent }, 
 {path: 'notifications', component: NotificationsComponent },
+{path: '**', redirectTo: '/home', pathMatch: 'full' },  
 ];
