@@ -4,4 +4,10 @@
     <button (click)="login()">SIGN IN</button>
 </div>
 <!-- <button (click)="signup()">Signup</button> -->
+<div *ngIf="!signupError">
+    <p>please verify your informations </p>
+  </div>
+  <div *ngIf="!loginError">
+    <p>please verify your informations </p>
+  </div>
 
