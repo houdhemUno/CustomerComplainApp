@@ -1,14 +1,4 @@
 import { Routes } from '@angular/router';
-// import { ReclamationsComponent } from './reclamations/reclamations.component';
-// import { ReclamationDetailsComponent } from './reclamation-details/reclamation-details.component';
-// import { ReclamationFormComponent } from './reclamation-form/reclamation-form.component';
-// import { LoginComponent } from './login/login.component';
-// import { HistoriqueComponent } from './historique/historique.component';
-// import { RapportsComponent } from './rapports/rapports.component';
-// import { UsersComponent } from './users/users.component';
-// import { UserDetailsComponent } from './user-details/user-details.component';
-// import { UserFormComponent } from './user-form/user-form.component';
-// import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NotificationsComponent } from '../components/notifications/notifications.component';
 import { ReclamationsComponent } from '../components/reclamations/reclamations.component';
 import { ReclamationDetailsComponent } from '../components/reclamation-details/reclamation-details.component';
@@ -41,6 +31,6 @@ export const routes: Routes = [
 {path: 'creer-user', component: UserFormComponent },    
 {path: 'modifier-user/:id', component: UserFormComponent }, 
 {path: 'notifications', component: NotificationsComponent },
+{path: 'about-us', component: AboutUsComponent },
 {path: '**', redirectTo: '/home', pathMatch: 'full' },
-{ path: 'about-us', component: AboutUsComponent },
 ];
