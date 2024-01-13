@@ -6,7 +6,7 @@ import { FormsModule,
   ReactiveFormsModule,
   Validators,
   FormBuilder,} from '@angular/forms';
-import { emailFormatValidator, passwordMatchValidator } from '../../utils';
+import { emailFormatValidator, passwordMatchValidator, passwordStrengthValidator } from '../../utils';
 
 @Component({
   selector: 'app-login',
@@ -84,8 +84,5 @@ status: boolean = false;
     console.log(this.signInForm.value);
   }
 
-}
-function passwordStrengthValidator(): any {
-  throw new Error('Function not implemented.');
 }
 

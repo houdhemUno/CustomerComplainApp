@@ -18,7 +18,6 @@ import { AboutUsComponent } from '../components/about-us/about-us.component';
 export const routes: Routes = [    
 {path: '', redirectTo: '/home', pathMatch: 'full' },
 {path: 'home', component: LandingComponent },
-// {path: 'signup', component:SignUpFormComponent /* LandingComponent */  },
 {path: 'reclamations', component: ReclamationsComponent },
 {path: 'reclamation/:id', component: ReclamationDetailsComponent },
 {path: 'creer-reclamation', component: ReclamationFormComponent },
